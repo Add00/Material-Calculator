@@ -1,0 +1,15 @@
+:root {
+  --font-size: 12;
+}
+
+.col {
+  text-align: center;
+}
+
+h2 {
+  text-align: right;
+}
+
+#btn-backspace {
+  float: left;
+}

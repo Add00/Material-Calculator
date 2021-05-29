@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.2/iconfont/material-icons.min.css"
+      integrity="sha512-y9glprRcVESvYY3suAqBUYXx0ySbQNvbzzgvLy9F2o38Y7XCNeq/No2gnHjV3+Rjyq5ijoPZRMXotpdw6jcG4g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+      integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.3.2/math.js"
+      integrity="sha512-Imer9iTeuCPbyZUYNTKsBWsAk3m7n1vOgPsAmw4OlkGSS9qK3/WlJZg7wC/9kL7nUUOyb06AYS8DyYQV7ELEbg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script defer src="index.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Calculator</title>
+  </head>
+
+  <body>
+    <div class="row">
+      <div class="card col s12">
+        <h2 class="flow-text" id="h2-problem">|</h2>
+        <h2 class="flow-text" id="h2-solution"></h2>
+        <a class="waves-effect waves-teal btn-flat" id="btn-backspace">
+          <i class="material-icons left">backspace</i>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <div class="col s3">
+          <a class="waves-effect waves-teal btn-flat btn-number" id="btn-7">
+            7
+          </a>
+        </div>
+        <div class="col s3">
+          <a class="waves-effect waves-teal btn-flat btn-number" id="btn-8">
+            8
+          </a>
+        </div>
+        <div class="col s3">
+          <a class="waves-effect waves-teal btn-flat btn-number" id="btn-9">
+            9
+          </a>
+        </div>
+        <div class="col s3">
+          <a
+            class="waves-effect waves-teal btn-flat btn-operator"
+            id="btn-multiply"
+          >
+            &times;
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s3">
+          <a class="waves-effect waves-teal btn-flat btn-number" id="btn-4">
+            4
+          </a>
+        </div>
+        <div class="col s3">
+          <a class="waves-effect waves-teal btn-flat btn-number" id="btn-5">
+            5
+          </a>
+        </div>
+        <div class="col s3">
+          <a class="waves-effect waves-teal btn-flat btn-number" id="btn-6">
+            6
+          </a>
+        </div>
+        <div class="col s3">
+          <a
+            class="waves-effect waves-teal btn-flat btn-operator"
+            id="btn-divide"
+            >&divide;
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s3">
+          <a class="waves-effect waves-teal btn-flat btn-number" id="btn-1">
+            1
+          </a>
+        </div>
+        <div class="col s3">
+          <a class="waves-effect waves-teal btn-flat btn-number" id="btn-2">
+            2
+          </a>
+        </div>
+        <div class="col s3">
+          <a class="waves-effect waves-teal btn-flat btn-number" id="btn-3">
+            3
+          </a>
+        </div>
+        <div class="col s3">
+          <a class="waves-effect waves-teal btn-flat btn-operator" id="btn-add">
+            +
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s3">
+          <a class="waves-effect waves-teal btn-flat btn-number" id="btn-0">
+            0
+          </a>
+        </div>
+        <div class="col s3">
+          <a class="waves-effect waves-teal btn-flat btn-number" id="btn-dot">
+            .
+          </a>
+        </div>
+        <div class="col s3">
+          <a class="waves-effect waves-teal btn-flat" id="btn-equals"> = </a>
+        </div>
+        <div class="col s3">
+          <a
+            class="waves-effect waves-teal btn-flat btn-operator"
+            id="btn-subtract"
+          >
+            -
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
