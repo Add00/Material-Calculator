@@ -1,5 +1,5 @@
-:root {
-  --font-size: 12;
+body {
+  background-color: lightgrey;
 }
 
 .col {
@@ -7,9 +7,51 @@
 }
 
 h2 {
+  padding-right: 1.5em;
   text-align: right;
 }
 
-#btn-backspace {
-  float: left;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .outer-margin {
+    margin-top: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .outer-margin {
+    margin-top: 2.5em;
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .outer-margin {
+    margin-top: 2.5em;
+    margin-left: 4em;
+    margin-right: 4em;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .outer-margin {
+    margin-top: 2.5em;
+    margin-left: 6em;
+    margin-right: 6em;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .outer-margin {
+    margin-top: 2.5em;
+    margin-left: 8em;
+    margin-right: 8em;
+  }
 }

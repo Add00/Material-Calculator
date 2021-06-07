@@ -17,13 +17,27 @@ $(function(){
 
     $('#btn-equals').on('click', (ele) => {
         expression = problem.replace('×', '*').replace('÷', '/');
-
         $('#h2-solution').text(math.evaluate(expression));
+        //console.log(problem);
     });
 
-    $('#btn-backspace').on('click', (ele) => {
+    $('#btn-clear').on('click', (ele) => {
+        problem = '';
         $('#h2-problem').text('|');
         $('#h2-solution').text('_');
+        //console.log(problem);
+    });
+
+    $('#btn-delete').on('click', (ele) => {
+        problem = problem.slice(0, -1);
+        $('#h2-problem').text(problem);
+        $('#h2-solution').text('_');
+        //console.log(problem);
+    });
+
+    $('#btn-copy').on('click', (ele) => {
+       navigator.clipboard.writeText(math.evaluate(problem));
+       M.toast({html: 'copied to clipboard', classes: 'rounded', displayLength: 1000});
     });
 
 });
